@@ -1,0 +1,284 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\USER\\Downloads\\SarasaviLibraryManagement\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{48893548-C715-45C4-B291-2E4D40979C7A}|SarasaviLibraryManagement\\SarasaviLibraryManagement.csproj|c:\\users\\user\\downloads\\sarasavilibrarymanagement\\sarasavilibrarymanagement\\userregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48893548-C715-45C4-B291-2E4D40979C7A}|SarasaviLibraryManagement\\SarasaviLibraryManagement.csproj|solutionrelative:sarasavilibrarymanagement\\userregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48893548-C715-45C4-B291-2E4D40979C7A}|SarasaviLibraryManagement\\SarasaviLibraryManagement.csproj|c:\\users\\user\\downloads\\sarasavilibrarymanagement\\sarasavilibrarymanagement\\userregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{48893548-C715-45C4-B291-2E4D40979C7A}|SarasaviLibraryManagement\\SarasaviLibraryManagement.csproj|solutionrelative:sarasavilibrarymanagement\\userregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48893548-C715-45C4-B291-2E4D40979C7A}|SarasaviLibraryManagement\\SarasaviLibraryManagement.csproj|c:\\users\\user\\downloads\\sarasavilibrarymanagement\\sarasavilibrarymanagement\\returnbook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{48893548-C715-45C4-B291-2E4D40979C7A}|SarasaviLibraryManagement\\SarasaviLibraryManagement.csproj|solutionrelative:sarasavilibrarymanagement\\returnbook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48893548-C715-45C4-B291-2E4D40979C7A}|SarasaviLibraryManagement\\SarasaviLibraryManagement.csproj|c:\\users\\user\\downloads\\sarasavilibrarymanagement\\sarasavilibrarymanagement\\login.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48893548-C715-45C4-B291-2E4D40979C7A}|SarasaviLibraryManagement\\SarasaviLibraryManagement.csproj|solutionrelative:sarasavilibrarymanagement\\login.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48893548-C715-45C4-B291-2E4D40979C7A}|SarasaviLibraryManagement\\SarasaviLibraryManagement.csproj|c:\\users\\user\\downloads\\sarasavilibrarymanagement\\sarasavilibrarymanagement\\loan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48893548-C715-45C4-B291-2E4D40979C7A}|SarasaviLibraryManagement\\SarasaviLibraryManagement.csproj|solutionrelative:sarasavilibrarymanagement\\loan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48893548-C715-45C4-B291-2E4D40979C7A}|SarasaviLibraryManagement\\SarasaviLibraryManagement.csproj|c:\\users\\user\\downloads\\sarasavilibrarymanagement\\sarasavilibrarymanagement\\loanbook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{48893548-C715-45C4-B291-2E4D40979C7A}|SarasaviLibraryManagement\\SarasaviLibraryManagement.csproj|solutionrelative:sarasavilibrarymanagement\\loanbook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48893548-C715-45C4-B291-2E4D40979C7A}|SarasaviLibraryManagement\\SarasaviLibraryManagement.csproj|c:\\users\\user\\downloads\\sarasavilibrarymanagement\\sarasavilibrarymanagement\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{48893548-C715-45C4-B291-2E4D40979C7A}|SarasaviLibraryManagement\\SarasaviLibraryManagement.csproj|solutionrelative:sarasavilibrarymanagement\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48893548-C715-45C4-B291-2E4D40979C7A}|SarasaviLibraryManagement\\SarasaviLibraryManagement.csproj|c:\\users\\user\\downloads\\sarasavilibrarymanagement\\sarasavilibrarymanagement\\bookregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{48893548-C715-45C4-B291-2E4D40979C7A}|SarasaviLibraryManagement\\SarasaviLibraryManagement.csproj|solutionrelative:sarasavilibrarymanagement\\bookregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48893548-C715-45C4-B291-2E4D40979C7A}|SarasaviLibraryManagement\\SarasaviLibraryManagement.csproj|c:\\users\\user\\downloads\\sarasavilibrarymanagement\\sarasavilibrarymanagement\\inquiry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{48893548-C715-45C4-B291-2E4D40979C7A}|SarasaviLibraryManagement\\SarasaviLibraryManagement.csproj|solutionrelative:sarasavilibrarymanagement\\inquiry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48893548-C715-45C4-B291-2E4D40979C7A}|SarasaviLibraryManagement\\SarasaviLibraryManagement.csproj|c:\\users\\user\\downloads\\sarasavilibrarymanagement\\sarasavilibrarymanagement\\lbs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{48893548-C715-45C4-B291-2E4D40979C7A}|SarasaviLibraryManagement\\SarasaviLibraryManagement.csproj|solutionrelative:sarasavilibrarymanagement\\lbs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48893548-C715-45C4-B291-2E4D40979C7A}|SarasaviLibraryManagement\\SarasaviLibraryManagement.csproj|c:\\users\\user\\downloads\\sarasavilibrarymanagement\\sarasavilibrarymanagement\\resevation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{48893548-C715-45C4-B291-2E4D40979C7A}|SarasaviLibraryManagement\\SarasaviLibraryManagement.csproj|solutionrelative:sarasavilibrarymanagement\\resevation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48893548-C715-45C4-B291-2E4D40979C7A}|SarasaviLibraryManagement\\SarasaviLibraryManagement.csproj|c:\\users\\user\\downloads\\sarasavilibrarymanagement\\sarasavilibrarymanagement\\bookregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48893548-C715-45C4-B291-2E4D40979C7A}|SarasaviLibraryManagement\\SarasaviLibraryManagement.csproj|solutionrelative:sarasavilibrarymanagement\\bookregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48893548-C715-45C4-B291-2E4D40979C7A}|SarasaviLibraryManagement\\SarasaviLibraryManagement.csproj|c:\\users\\user\\downloads\\sarasavilibrarymanagement\\sarasavilibrarymanagement\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48893548-C715-45C4-B291-2E4D40979C7A}|SarasaviLibraryManagement\\SarasaviLibraryManagement.csproj|solutionrelative:sarasavilibrarymanagement\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48893548-C715-45C4-B291-2E4D40979C7A}|SarasaviLibraryManagement\\SarasaviLibraryManagement.csproj|c:\\users\\user\\downloads\\sarasavilibrarymanagement\\sarasavilibrarymanagement\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48893548-C715-45C4-B291-2E4D40979C7A}|SarasaviLibraryManagement\\SarasaviLibraryManagement.csproj|solutionrelative:sarasavilibrarymanagement\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48893548-C715-45C4-B291-2E4D40979C7A}|SarasaviLibraryManagement\\SarasaviLibraryManagement.csproj|c:\\users\\user\\downloads\\sarasavilibrarymanagement\\sarasavilibrarymanagement\\lbs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48893548-C715-45C4-B291-2E4D40979C7A}|SarasaviLibraryManagement\\SarasaviLibraryManagement.csproj|solutionrelative:sarasavilibrarymanagement\\lbs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48893548-C715-45C4-B291-2E4D40979C7A}|SarasaviLibraryManagement\\SarasaviLibraryManagement.csproj|c:\\users\\user\\downloads\\sarasavilibrarymanagement\\sarasavilibrarymanagement\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48893548-C715-45C4-B291-2E4D40979C7A}|SarasaviLibraryManagement\\SarasaviLibraryManagement.csproj|solutionrelative:sarasavilibrarymanagement\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserRegistration.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\SarasaviLibraryManagement\\SarasaviLibraryManagement\\UserRegistration.cs",
+              "RelativeDocumentMoniker": "SarasaviLibraryManagement\\UserRegistration.cs",
+              "ToolTip": "C:\\Users\\USER\\Downloads\\SarasaviLibraryManagement\\SarasaviLibraryManagement\\UserRegistration.cs [Design]",
+              "RelativeToolTip": "SarasaviLibraryManagement\\UserRegistration.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-12T11:31:23.276Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LoanBook.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\SarasaviLibraryManagement\\SarasaviLibraryManagement\\LoanBook.cs",
+              "RelativeDocumentMoniker": "SarasaviLibraryManagement\\LoanBook.cs",
+              "ToolTip": "C:\\Users\\USER\\Downloads\\SarasaviLibraryManagement\\SarasaviLibraryManagement\\LoanBook.cs [Design]",
+              "RelativeToolTip": "SarasaviLibraryManagement\\LoanBook.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-12T11:37:58.189Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Loan.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\SarasaviLibraryManagement\\SarasaviLibraryManagement\\Loan.cs",
+              "RelativeDocumentMoniker": "SarasaviLibraryManagement\\Loan.cs",
+              "ToolTip": "C:\\Users\\USER\\Downloads\\SarasaviLibraryManagement\\SarasaviLibraryManagement\\Loan.cs",
+              "RelativeToolTip": "SarasaviLibraryManagement\\Loan.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-12T12:01:39.86Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Login.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\SarasaviLibraryManagement\\SarasaviLibraryManagement\\Login.Designer.cs",
+              "RelativeDocumentMoniker": "SarasaviLibraryManagement\\Login.Designer.cs",
+              "ToolTip": "C:\\Users\\USER\\Downloads\\SarasaviLibraryManagement\\SarasaviLibraryManagement\\Login.Designer.cs",
+              "RelativeToolTip": "SarasaviLibraryManagement\\Login.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-12T13:22:49.32Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserRegistration.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\SarasaviLibraryManagement\\SarasaviLibraryManagement\\UserRegistration.cs",
+              "RelativeDocumentMoniker": "SarasaviLibraryManagement\\UserRegistration.cs",
+              "ToolTip": "C:\\Users\\USER\\Downloads\\SarasaviLibraryManagement\\SarasaviLibraryManagement\\UserRegistration.cs",
+              "RelativeToolTip": "SarasaviLibraryManagement\\UserRegistration.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwBkAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-12T11:49:21.109Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ReturnBook.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\SarasaviLibraryManagement\\SarasaviLibraryManagement\\ReturnBook.cs",
+              "RelativeDocumentMoniker": "SarasaviLibraryManagement\\ReturnBook.cs",
+              "ToolTip": "C:\\Users\\USER\\Downloads\\SarasaviLibraryManagement\\SarasaviLibraryManagement\\ReturnBook.cs [Design]",
+              "RelativeToolTip": "SarasaviLibraryManagement\\ReturnBook.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-12T11:38:44.543Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Resevation.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\SarasaviLibraryManagement\\SarasaviLibraryManagement\\Resevation.cs",
+              "RelativeDocumentMoniker": "SarasaviLibraryManagement\\Resevation.cs",
+              "ToolTip": "C:\\Users\\USER\\Downloads\\SarasaviLibraryManagement\\SarasaviLibraryManagement\\Resevation.cs [Design]",
+              "RelativeToolTip": "SarasaviLibraryManagement\\Resevation.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-12T11:40:07.612Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Login.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\SarasaviLibraryManagement\\SarasaviLibraryManagement\\Login.cs",
+              "RelativeDocumentMoniker": "SarasaviLibraryManagement\\Login.cs",
+              "ToolTip": "C:\\Users\\USER\\Downloads\\SarasaviLibraryManagement\\SarasaviLibraryManagement\\Login.cs [Design]",
+              "RelativeToolTip": "SarasaviLibraryManagement\\Login.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-12T10:55:25.92Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "lbs.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\SarasaviLibraryManagement\\SarasaviLibraryManagement\\lbs.cs",
+              "RelativeDocumentMoniker": "SarasaviLibraryManagement\\lbs.cs",
+              "ToolTip": "C:\\Users\\USER\\Downloads\\SarasaviLibraryManagement\\SarasaviLibraryManagement\\lbs.cs [Design]",
+              "RelativeToolTip": "SarasaviLibraryManagement\\lbs.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-12T11:15:19.522Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Inquiry.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\SarasaviLibraryManagement\\SarasaviLibraryManagement\\Inquiry.cs",
+              "RelativeDocumentMoniker": "SarasaviLibraryManagement\\Inquiry.cs",
+              "ToolTip": "C:\\Users\\USER\\Downloads\\SarasaviLibraryManagement\\SarasaviLibraryManagement\\Inquiry.cs [Design]",
+              "RelativeToolTip": "SarasaviLibraryManagement\\Inquiry.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-12T11:41:12.793Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "BookRegistration.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\SarasaviLibraryManagement\\SarasaviLibraryManagement\\BookRegistration.cs",
+              "RelativeDocumentMoniker": "SarasaviLibraryManagement\\BookRegistration.cs",
+              "ToolTip": "C:\\Users\\USER\\Downloads\\SarasaviLibraryManagement\\SarasaviLibraryManagement\\BookRegistration.cs [Design]",
+              "RelativeToolTip": "SarasaviLibraryManagement\\BookRegistration.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-12T11:35:51.263Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "BookRegistration.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\SarasaviLibraryManagement\\SarasaviLibraryManagement\\BookRegistration.cs",
+              "RelativeDocumentMoniker": "SarasaviLibraryManagement\\BookRegistration.cs",
+              "ToolTip": "C:\\Users\\USER\\Downloads\\SarasaviLibraryManagement\\SarasaviLibraryManagement\\BookRegistration.cs",
+              "RelativeToolTip": "SarasaviLibraryManagement\\BookRegistration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-12T11:56:05.16Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\SarasaviLibraryManagement\\SarasaviLibraryManagement\\User.cs",
+              "RelativeDocumentMoniker": "SarasaviLibraryManagement\\User.cs",
+              "ToolTip": "C:\\Users\\USER\\Downloads\\SarasaviLibraryManagement\\SarasaviLibraryManagement\\User.cs",
+              "RelativeToolTip": "SarasaviLibraryManagement\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-12T11:59:54.108Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Book.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\SarasaviLibraryManagement\\SarasaviLibraryManagement\\Book.cs",
+              "RelativeDocumentMoniker": "SarasaviLibraryManagement\\Book.cs",
+              "ToolTip": "C:\\Users\\USER\\Downloads\\SarasaviLibraryManagement\\SarasaviLibraryManagement\\Book.cs",
+              "RelativeToolTip": "SarasaviLibraryManagement\\Book.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-12T11:57:11.027Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "lbs.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\SarasaviLibraryManagement\\SarasaviLibraryManagement\\lbs.cs",
+              "RelativeDocumentMoniker": "SarasaviLibraryManagement\\lbs.cs",
+              "ToolTip": "C:\\Users\\USER\\Downloads\\SarasaviLibraryManagement\\SarasaviLibraryManagement\\lbs.cs",
+              "RelativeToolTip": "SarasaviLibraryManagement\\lbs.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAkwBcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-12T11:24:26.644Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Login.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\SarasaviLibraryManagement\\SarasaviLibraryManagement\\Login.cs",
+              "RelativeDocumentMoniker": "SarasaviLibraryManagement\\Login.cs",
+              "ToolTip": "C:\\Users\\USER\\Downloads\\SarasaviLibraryManagement\\SarasaviLibraryManagement\\Login.cs",
+              "RelativeToolTip": "SarasaviLibraryManagement\\Login.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAASwCQAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-12T11:01:17.386Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

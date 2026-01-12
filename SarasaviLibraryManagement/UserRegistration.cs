@@ -29,6 +29,9 @@ namespace SarasaviLibraryManagement
             txtName.Text = "";
             txtNIC.Text = "";
             //cmbSex.SelectedIndex = 0; 
+
+
+
             txtAddress.Text = "";
 
             txtUserNo.Select();

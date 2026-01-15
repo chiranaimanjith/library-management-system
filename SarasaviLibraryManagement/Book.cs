@@ -8,7 +8,7 @@ namespace SarasaviLibraryManagement
 {
     public class Book
     {
-        public string BookNumber { get; set; }
+        public string BookId { get; set; }
         public string Title { get; set; }
         public string Publisher { get; set; }
         public bool IsReferenceOnly { get; set; }

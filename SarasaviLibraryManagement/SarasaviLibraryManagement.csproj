@@ -54,6 +54,7 @@
       <DependentUpon>BookRegistration.cs</DependentUpon>
     </Compile>
     <Compile Include="cmbSex\Selected.cs" />
+    <Compile Include="DBConnection.cs" />
     <Compile Include="Inquiry.cs">
       <SubType>Form</SubType>
     </Compile>

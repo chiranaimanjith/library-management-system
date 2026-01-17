@@ -35,7 +35,30 @@ namespace SarasaviLibraryManagement
         private void button1_Click(object sender, EventArgs e)
         {
             lbs br = new lbs();
+            br.FormClosed += (s, args) => this.Show();
+
             br.Show();
+            this.Hide();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

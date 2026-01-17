@@ -53,5 +53,12 @@ namespace SarasaviLibraryManagement
             Inquiry br = new Inquiry();
             br.Show();
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+
+            this.Owner?.Show();
+            this.Close();
+        }
     }
 }

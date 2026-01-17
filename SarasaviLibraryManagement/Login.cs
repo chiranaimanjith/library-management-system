@@ -7,14 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace SarasaviLibraryManagement
 {
     public partial class Login : Form
     {
+        private string connectionString = "server=localhost;user=root;password=2004;database=library_db;";
+        private TextBox txtUserNumber;
+        private MySqlConnection con; 
+
         public Login()
         {
             InitializeComponent();
+            con = new MySqlConnection(connectionString); 
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -34,11 +40,44 @@ namespace SarasaviLibraryManagement
 
         private void button1_Click(object sender, EventArgs e)
         {
-            lbs br = new lbs();
-            br.FormClosed += (s, args) => this.Show();
+            if (txtusername.Text == "" || txtpassword.Text == "")
+            {
+                MessageBox.Show("Please enter Username and Password");
+                return;
+            }
 
-            br.Show();
-            this.Hide();
+            try
+            {
+                con.Open();
+
+                string query = "SELECT * FROM admin WHERE Username=@Username AND Password=@Password";
+                MySqlCommand cmd = new MySqlCommand(query, con);
+
+                cmd.Parameters.AddWithValue("@Username", txtusername.Text);
+                cmd.Parameters.AddWithValue("@Password", txtpassword.Text);
+
+                MySqlDataReader dr = cmd.ExecuteReader();
+
+                if (dr.Read())
+                {
+                    lbs br = new lbs();
+                    br.FormClosed += (s, args) => this.Show();
+                    br.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Invalid Username or Password", "Error");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
         }
 
         private void label3_Click(object sender, EventArgs e)

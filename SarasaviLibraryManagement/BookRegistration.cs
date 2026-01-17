@@ -8,11 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using MySql.Data.MySqlClient;
 
 namespace SarasaviLibraryManagement
 {
     public partial class BookRegistration : Form
-    {
+            {
+        private string connectionString = "server=localhost;user=root;password=2004;database=library_db;";
+        private TextBox txtUserNumber;
         private object txtUserNo;
 
         public BookRegistration()
@@ -67,7 +70,6 @@ namespace SarasaviLibraryManagement
                             MessageBoxButtons.OK,
                             MessageBoxIcon.Information);
         }
-
 
         private void button3_Click(object sender, EventArgs e)
         {

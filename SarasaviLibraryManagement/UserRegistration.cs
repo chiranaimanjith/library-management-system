@@ -8,28 +8,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace SarasaviLibraryManagement
 {
     public partial class UserRegistration : Form
     {
-        // Add this field to match the usage of txtUserNumber in the form
+        private string connectionString = "server=localhost;user=root;password=2004;database=library_db;";
         private TextBox txtUserNumber;
 
         public UserRegistration()
         {
             InitializeComponent();
 
-            // Ensure txtUserNumber is initialized if not done by designer
-            if (txtUserNumber == null)
-            {
-                txtUserNumber = new TextBox();
-                txtUserNumber.Name = "txtUserNumber";
-                // Optionally, add to Controls if needed:
-                // this.Controls.Add(txtUserNumber);
-            }
-        }
 
+
+        }                                   
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
@@ -48,12 +42,12 @@ namespace SarasaviLibraryManagement
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtUserNumber.Text) ||
-         string.IsNullOrWhiteSpace(txtName.Text) ||
-         string.IsNullOrWhiteSpace(txtNIC.Text) ||
-         string.IsNullOrWhiteSpace(txtAddress.Text) ||
-         string.IsNullOrWhiteSpace(cmbSex.Text) ||
-         string.IsNullOrWhiteSpace(cmbUserType.Text))
+            if (string.IsNullOrWhiteSpace(txtUserNo.Text) ||
+        string.IsNullOrWhiteSpace(txtName.Text) ||
+        string.IsNullOrWhiteSpace(txtNIC.Text) ||
+        string.IsNullOrWhiteSpace(txtAddress.Text) ||
+        string.IsNullOrWhiteSpace(cmbSex.Text) ||
+        string.IsNullOrWhiteSpace(cmbUserType.Text))
             {
                 MessageBox.Show("Please fill all required fields.", "Warning",
                                 MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -62,16 +56,16 @@ namespace SarasaviLibraryManagement
 
             try
             {
-                using (SqlConnection con = DBConnection.GetConnection())
+                using (MySqlConnection con = new MySqlConnection(connectionString))
                 {
                     string query = @"INSERT INTO users
                             (UserNumber, Name, Sex, NIC, Address, UserType)
-                             VALUES
+                            VALUES
                             (@UserNumber, @Name, @Sex, @NIC, @Address, @UserType)";
 
-                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    using (MySqlCommand cmd = new MySqlCommand(query, con))
                     {
-                        cmd.Parameters.AddWithValue("@UserNumber", txtUserNumber.Text.Trim());
+                        cmd.Parameters.AddWithValue("@UserNumber", txtUserNo.Text.Trim());
                         cmd.Parameters.AddWithValue("@Name", txtName.Text.Trim());
                         cmd.Parameters.AddWithValue("@Sex", cmbSex.Text);
                         cmd.Parameters.AddWithValue("@NIC", txtNIC.Text.Trim());
@@ -85,13 +79,13 @@ namespace SarasaviLibraryManagement
 
                 MessageBox.Show("User registered successfully ✅");
 
-                txtUserNumber.Clear();
+                txtUserNo.Clear();
                 txtName.Clear();
                 txtNIC.Clear();
                 txtAddress.Clear();
                 cmbSex.SelectedIndex = -1;
                 cmbUserType.SelectedIndex = -1;
-                txtUserNumber.Focus();
+                txtUserNo.Focus();
             }
             catch (Exception ex)
             {

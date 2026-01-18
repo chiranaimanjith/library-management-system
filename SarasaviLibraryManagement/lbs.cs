@@ -17,18 +17,74 @@ namespace SarasaviLibraryManagement
             InitializeComponent();
         }
 
+        private Form activeForm;
+        private readonly Stack<Type> backStack = new Stack<Type>();
+
+        private void LoadFormToPanel(Panel targetPanel, Form frm, bool addToHistory = true)
+        {
+            if (targetPanel == null) throw new ArgumentNullException(nameof(targetPanel));
+            if (frm == null) throw new ArgumentNullException(nameof(frm));
+
+            targetPanel.SuspendLayout();
+
+            if (activeForm != null && addToHistory)
+                backStack.Push(activeForm.GetType());
+
+           
+            if (activeForm != null)
+            {
+                activeForm.Close();
+                activeForm.Dispose();
+                activeForm = null;
+            }
+
+           
+            foreach (Control c in targetPanel.Controls) c.Dispose();
+            targetPanel.Controls.Clear();
+
+           
+            activeForm = frm;
+            frm.TopLevel = false;
+            frm.FormBorderStyle = FormBorderStyle.None;
+            frm.Dock = DockStyle.Fill;
+
+            targetPanel.Controls.Add(frm);
+            frm.BringToFront();
+            frm.Show();
+
+            targetPanel.ResumeLayout();
+        }
+
+        
+        public void BackToPrevious(Panel targetPanel)
+        {
+            if (backStack.Count > 0)
+            {
+                var prevType = backStack.Pop();
+                var prevForm = (Form)Activator.CreateInstance(prevType);
+                LoadFormToPanel(targetPanel, prevForm, addToHistory: false);
+            }
+            else
+            {
+               
+                if (activeForm != null)
+                {
+                    activeForm.Close();
+                    activeForm.Dispose();
+                    activeForm = null;
+                }
+                foreach (Control c in targetPanel.Controls) c.Dispose();
+                targetPanel.Controls.Clear();
+            }
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
-            UserRegistration br = new UserRegistration();
-            br.Show();
-
+            // Pass 'this' (the current lbs instance) to the UserRegistration constructor
+            LoadFormToPanel(panel4, new UserRegistration(this));
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            BookRegistration br = new BookRegistration();
-            br.Show();
-        }
+      
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -79,6 +135,46 @@ namespace SarasaviLibraryManagement
         private void label8_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            LoadFormToPanel(panel4, new BookRegistration());
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            LoadFormToPanel(panel4, new LoanBook());
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            LoadFormToPanel(panel4, new ReturnBook()); 
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            LoadFormToPanel(panel4, new Resevation());
+        }
+
+        private void button6_Click_1(object sender, EventArgs e)
+        {
+            LoadFormToPanel(panel4, new Inquiry());
+        }
+
+        private void button7_Click_1(object sender, EventArgs e)
+        {
+            LoadFormToPanel(panel4, new AdminPermission()); 
         }
     }
 }

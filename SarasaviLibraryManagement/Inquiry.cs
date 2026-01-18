@@ -7,11 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace SarasaviLibraryManagement
 {
     public partial class Inquiry : Form
     {
+        private string connectionString = "server=localhost;user=root;password=2004;database=library_db;";
+        private TextBox txtUserNumber;
+        private MySqlConnection con;
         public Inquiry()
         {
             InitializeComponent();

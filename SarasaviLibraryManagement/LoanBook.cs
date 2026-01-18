@@ -7,11 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace SarasaviLibraryManagement
 {
     public partial class LoanBook : Form
     {
+        public static List<Loan> LoanList = new List<Loan>();
+        private string connectionString = "server=localhost;user=root;password=2004;database=library_db;";
+        private TextBox txtUserNumber;
+        private MySqlConnection con;
         public LoanBook()
         {
             InitializeComponent();

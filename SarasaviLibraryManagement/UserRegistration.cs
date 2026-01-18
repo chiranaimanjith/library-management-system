@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.DirectoryServices.ActiveDirectory;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -16,14 +17,12 @@ namespace SarasaviLibraryManagement
     {
         private string connectionString = "server=localhost;user=root;password=2004;database=library_db;";
         private TextBox txtUserNumber;
+        private Panel panel4;
 
-        public UserRegistration()
+        public UserRegistration(lbs main)
         {
             InitializeComponent();
-
-
-
-        }                                   
+        }
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
@@ -93,14 +92,9 @@ namespace SarasaviLibraryManagement
             }
         }
 
-
-
-
         private void button3_Click(object sender, EventArgs e)
         {
-            this.Close();
-
-            this.Hide();
+            BackToPrevious(panel4);
         }
 
         private void txtUserNo_TextChanged(object sender, EventArgs e)
@@ -126,9 +120,7 @@ namespace SarasaviLibraryManagement
         private void cmbSex_SelectedIndexChanged(object sender, EventArgs e)
 
         {
-}        
-
-
+        }
 
         private void UserRegistration_Load(object sender, EventArgs e)
         {
@@ -146,6 +138,12 @@ namespace SarasaviLibraryManagement
         private void UserRegistration_Load_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void BackToPrevious(Panel panel)
+        {
+            this.Hide();
+            this.Close();
         }
     }
 }

@@ -40,7 +40,7 @@ namespace SarasaviLibraryManagement
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (txtusername.Text == "" || txtpassword.Text == "")
+            if (txtusername.Text == "" || textBox1.Text == "")
             {
                 MessageBox.Show("Please enter Username and Password");
                 return;
@@ -54,9 +54,12 @@ namespace SarasaviLibraryManagement
                 MySqlCommand cmd = new MySqlCommand(query, con);
 
                 cmd.Parameters.AddWithValue("@Username", txtusername.Text);
-                cmd.Parameters.AddWithValue("@Password", txtpassword.Text);
+                cmd.Parameters.AddWithValue("@Password", textBox1.Text);
 
                 MySqlDataReader dr = cmd.ExecuteReader();
+
+                txtusername.Text = "";
+                textBox1.Text = "";
 
                 if (dr.Read())
                 {
@@ -98,6 +101,12 @@ namespace SarasaviLibraryManagement
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ForgotPassword forgotPassword = new ForgotPassword();
+            forgotPassword.Show();
         }
     }
 }

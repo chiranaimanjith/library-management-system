@@ -62,9 +62,9 @@
             this.label3.ForeColor = System.Drawing.Color.Gray;
             this.label3.Location = new System.Drawing.Point(462, 353);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(98, 25);
+            this.label3.Size = new System.Drawing.Size(109, 25);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Password";
+            this.label3.Text = "Password :";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // pictureBox1
@@ -89,7 +89,6 @@
             this.txtusername.Name = "txtusername";
             this.txtusername.Size = new System.Drawing.Size(451, 30);
             this.txtusername.TabIndex = 4;
-            this.txtusername.Text = "Username";
             this.txtusername.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // loginbtn
@@ -114,7 +113,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.White;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 27F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(548, 154);
+            this.label4.Location = new System.Drawing.Point(542, 167);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(307, 61);
             this.label4.TabIndex = 0;
@@ -131,7 +130,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(451, 30);
             this.textBox1.TabIndex = 4;
-            this.textBox1.Text = "Password";
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label2
@@ -142,9 +140,9 @@
             this.label2.ForeColor = System.Drawing.Color.Gray;
             this.label2.Location = new System.Drawing.Point(462, 261);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 25);
+            this.label2.Size = new System.Drawing.Size(113, 25);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Username";
+            this.label2.Text = "Username :";
             this.label2.Click += new System.EventHandler(this.label3_Click);
             // 
             // linkLabel1
@@ -157,6 +155,7 @@
             this.linkLabel1.TabIndex = 7;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Forgot Password?";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // label5
             // 
@@ -164,7 +163,7 @@
             this.label5.BackColor = System.Drawing.Color.White;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.DimGray;
-            this.label5.Location = new System.Drawing.Point(650, 224);
+            this.label5.Location = new System.Drawing.Point(653, 234);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(102, 25);
             this.label5.TabIndex = 0;

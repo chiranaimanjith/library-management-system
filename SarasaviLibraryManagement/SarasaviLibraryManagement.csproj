@@ -63,6 +63,7 @@
       <HintPath>..\packages\System.Configuration.ConfigurationManager.8.0.0\lib\net462\System.Configuration.ConfigurationManager.dll</HintPath>
     </Reference>
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.IO.Pipelines, Version=5.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.IO.Pipelines.5.0.2\lib\net461\System.IO.Pipelines.dll</HintPath>
     </Reference>
@@ -104,6 +105,18 @@
     </Compile>
     <Compile Include="cmbSex\Selected.cs" />
     <Compile Include="DBConnection.cs" />
+    <Compile Include="AdminPermission.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPermission.Designer.cs">
+      <DependentUpon>AdminPermission.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ForgotPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ForgotPassword.Designer.cs">
+      <DependentUpon>ForgotPassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inquiry.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,8 +163,14 @@
     <Compile Include="UserRegistration.Designer.cs">
       <DependentUpon>UserRegistration.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AdminPermission.resx">
+      <DependentUpon>AdminPermission.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BookRegistration.resx">
       <DependentUpon>BookRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForgotPassword.resx">
+      <DependentUpon>ForgotPassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inquiry.resx">
       <DependentUpon>Inquiry.cs</DependentUpon>
@@ -200,6 +219,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\library.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-plus-solid-full %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_2026-01-18_133233694.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\286-2861054_new-account-white-icon-person-with-plus-sign %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\output-onlinepngtools.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-plus-solid-full.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\286-2861054_new-account-white-icon-person-with-plus-sign %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-plus1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

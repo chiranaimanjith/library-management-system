@@ -63,9 +63,99 @@ namespace SarasaviLibraryManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _286_2861054_new_account_white_icon_person_with_plus_sign__1_ {
+            get {
+                object obj = ResourceManager.GetObject("286-2861054_new-account-white-icon-person-with-plus-sign (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _286_2861054_new_account_white_icon_person_with_plus_sign__1_1 {
+            get {
+                object obj = ResourceManager.GetObject("286-2861054_new-account-white-icon-person-with-plus-sign (1)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap image_2026_01_18_133233694 {
+            get {
+                object obj = ResourceManager.GetObject("image_2026-01-18_133233694", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap library {
             get {
                 object obj = ResourceManager.GetObject("library", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap output_onlinepngtools {
+            get {
+                object obj = ResourceManager.GetObject("output-onlinepngtools", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user {
+            get {
+                object obj = ResourceManager.GetObject("user", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user_plus {
+            get {
+                object obj = ResourceManager.GetObject("user-plus", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user_plus_solid_full {
+            get {
+                object obj = ResourceManager.GetObject("user-plus-solid-full", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user_plus_solid_full__1_ {
+            get {
+                object obj = ResourceManager.GetObject("user-plus-solid-full (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user_plus1 {
+            get {
+                object obj = ResourceManager.GetObject("user-plus1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

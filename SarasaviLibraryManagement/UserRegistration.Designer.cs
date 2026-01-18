@@ -151,9 +151,9 @@
             this.lbl4.AutoSize = true;
             this.lbl4.Location = new System.Drawing.Point(372, 334);
             this.lbl4.Name = "lbl4";
-            this.lbl4.Size = new System.Drawing.Size(30, 16);
+            this.lbl4.Size = new System.Drawing.Size(52, 16);
             this.lbl4.TabIndex = 10;
-            this.lbl4.Text = "Sex";
+            this.lbl4.Text = "Gender";
             this.lbl4.Click += new System.EventHandler(this.lbl4_Click);
             // 
             // cmbSex
@@ -215,7 +215,6 @@
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::SarasaviLibraryManagement.Properties.Resources.library;
             this.ClientSize = new System.Drawing.Size(1371, 702);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cmbUserType);

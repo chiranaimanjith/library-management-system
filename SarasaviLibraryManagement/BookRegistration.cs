@@ -40,30 +40,29 @@ namespace SarasaviLibraryManagement
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtbk.Text) || string.IsNullOrWhiteSpace(txttitle.Text) || string.IsNullOrWhiteSpace(txtauthour.Text))
+            if (string.IsNullOrWhiteSpace(txtbk.Text) ||
+               string.IsNullOrWhiteSpace(txttitle.Text) ||
+               string.IsNullOrWhiteSpace(txtauthour.Text) ||
+               cmbcl.SelectedIndex == -1 ||
+               cmbcopy.SelectedIndex == -1)
             {
-                MessageBox.Show("Fill All The Details Before Submit.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(
+                    "Please fill all fields.",
+                    "Validation Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
                 return;
             }
 
-            int numCopies;
-            if (!int.TryParse(textstock.Text, out numCopies) || numCopies < 1 || numCopies > 10)
+            if (!int.TryParse(textstock.Text, out int stock) || stock < 1)
             {
-                MessageBox.Show("Number of Copies must be a number between 1 and 10.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(
+                    "Stock quantity must be a positive number.",
+                    "Validation Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
                 return;
             }
-
-            Book book = new Book
-            {
-                Classification = cmbcl.Text,
-                BookNumber = txtbk.Text.Trim(),
-                Title = txttitle.Text.Trim(),
-                Author = txtauthour.Text.Trim(),
-                CopyType = cmbcopy.Text,
-                NumberOfCopies = numCopies,
-                AvailableCopies = numCopies,
-                IsAvailable = numCopies > 0
-            };
 
             try
             {
@@ -71,35 +70,72 @@ namespace SarasaviLibraryManagement
                 {
                     conn.Open();
 
-                    string query = @"INSERT INTO books 
-        ( Classification, BookNumber, Title, Author, Publisher, CopyType, NumberOfCopies, AvailableCopies)
-        VALUES 
-        (@Classification, @BookNumber, @Title, @Author, @Publisher, @CopyType, @NumberOfCopies, @AvailableCopies)";
+                     string checkQuery =
+                        "SELECT COUNT(*) FROM books WHERE BookNumber = @BookNumber";
 
-                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                    using (MySqlCommand checkCmd =
+                        new MySqlCommand(checkQuery, conn))
                     {
-                        cmd.Parameters.AddWithValue("@Classification", book.Classification);
-                        cmd.Parameters.AddWithValue("@BookNumber", book.BookNumber);
-                        cmd.Parameters.AddWithValue("@Title", book.Title);
-                        cmd.Parameters.AddWithValue("@Author", book.Author);
-                        cmd.Parameters.AddWithValue("@CopyType", book.CopyType);
+                        checkCmd.Parameters.AddWithValue(
+                            "@BookNumber", txtbk.Text.Trim());
 
-                        int copies = book.NumberOfCopies;
+                        int exists =
+                            Convert.ToInt32(checkCmd.ExecuteScalar());
 
-                        cmd.Parameters.AddWithValue("@NumberOfCopies", copies);
-                        cmd.Parameters.AddWithValue("@AvailableCopies", copies);
+                        if (exists > 0)
+                        {
+                            MessageBox.Show(
+                                "This Book Number already exists.",
+                                "Duplicate Entry",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning);
+                            return;
+                        }
+                    }
+
+                    string insertQuery = @"INSERT INTO books
+                    (Classification, BookNumber, Title, Author, ItemType, StockQuantity)
+                    VALUES
+                    (@Classification, @BookNumber, @Title, @Author, @ItemType, @StockQuantity)";
+
+                    using (MySqlCommand cmd =
+                        new MySqlCommand(insertQuery, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@Classification", cmbcl.Text);
+                        cmd.Parameters.AddWithValue("@BookNumber", txtbk.Text.Trim());
+                        cmd.Parameters.AddWithValue("@Title", txttitle.Text.Trim());
+                        cmd.Parameters.AddWithValue("@Author", txtauthour.Text.Trim());
+                        cmd.Parameters.AddWithValue("@ItemType", cmbcopy.Text);
+                        cmd.Parameters.AddWithValue("@StockQuantity", stock);
 
                         cmd.ExecuteNonQuery();
                     }
                 }
 
-                MessageBox.Show("Book saved successfully to database!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(
+                    "Book saved successfully!",
+                    "Success",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+
+                ClearForm();
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show(
+                    $"MySQL Error {ex.Number}\n{ex.Message}",
+                    "Database Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error saving to database: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(
+                    ex.Message,
+                    "Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
             }
-            ClearForm();
         }
 
         private void ClearForm()
@@ -121,6 +157,19 @@ namespace SarasaviLibraryManagement
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+        private void txtBookNumber_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+        private void txtTitle_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar) && e.KeyChar != ' ')
+            {
+            }
         }
     }
 }

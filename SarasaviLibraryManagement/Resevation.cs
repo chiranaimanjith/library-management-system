@@ -16,5 +16,10 @@ namespace SarasaviLibraryManagement
         {
             InitializeComponent();
         }
+
+        private void Resevation_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

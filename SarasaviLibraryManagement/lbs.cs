@@ -80,8 +80,8 @@ namespace SarasaviLibraryManagement
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // Pass 'this' (the current lbs instance) to the UserRegistration constructor
-            LoadFormToPanel(panel4, new UserRegistration(this));
+
+           LoadFormToPanel(panel4, new UserRegistration(this));
         }
 
       

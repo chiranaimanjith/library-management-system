@@ -54,7 +54,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(564, 76);
+            this.label1.Location = new System.Drawing.Point(419, 76);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(280, 39);
             this.label1.TabIndex = 0;
@@ -65,7 +65,7 @@
             this.lbl1.AutoSize = true;
             this.lbl1.BackColor = System.Drawing.Color.White;
             this.lbl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl1.Location = new System.Drawing.Point(372, 148);
+            this.lbl1.Location = new System.Drawing.Point(227, 148);
             this.lbl1.Name = "lbl1";
             this.lbl1.Size = new System.Drawing.Size(123, 24);
             this.lbl1.TabIndex = 1;
@@ -76,7 +76,7 @@
             this.lbl2.AutoSize = true;
             this.lbl2.BackColor = System.Drawing.Color.White;
             this.lbl2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl2.Location = new System.Drawing.Point(372, 200);
+            this.lbl2.Location = new System.Drawing.Point(227, 200);
             this.lbl2.Name = "lbl2";
             this.lbl2.Size = new System.Drawing.Size(61, 24);
             this.lbl2.TabIndex = 2;
@@ -87,7 +87,7 @@
             this.lbl3.AutoSize = true;
             this.lbl3.BackColor = System.Drawing.Color.White;
             this.lbl3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl3.Location = new System.Drawing.Point(373, 261);
+            this.lbl3.Location = new System.Drawing.Point(228, 261);
             this.lbl3.Name = "lbl3";
             this.lbl3.Size = new System.Drawing.Size(41, 24);
             this.lbl3.TabIndex = 3;
@@ -96,7 +96,7 @@
             // txtUserNo
             // 
             this.txtUserNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtUserNo.Location = new System.Drawing.Point(543, 148);
+            this.txtUserNo.Location = new System.Drawing.Point(398, 148);
             this.txtUserNo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUserNo.Name = "txtUserNo";
             this.txtUserNo.Size = new System.Drawing.Size(371, 22);
@@ -107,7 +107,7 @@
             // 
             this.txtName.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtName.Location = new System.Drawing.Point(543, 199);
+            this.txtName.Location = new System.Drawing.Point(398, 200);
             this.txtName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(371, 22);
@@ -117,7 +117,7 @@
             // txtNIC
             // 
             this.txtNIC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNIC.Location = new System.Drawing.Point(543, 261);
+            this.txtNIC.Location = new System.Drawing.Point(398, 261);
             this.txtNIC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNIC.Name = "txtNIC";
             this.txtNIC.Size = new System.Drawing.Size(371, 22);
@@ -128,7 +128,7 @@
             this.button1.BackColor = System.Drawing.Color.DodgerBlue;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(592, 554);
+            this.button1.Location = new System.Drawing.Point(482, 554);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(176, 52);
@@ -139,26 +139,30 @@
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(303, 554);
+            this.button2.ForeColor = System.Drawing.SystemColors.Control;
+            this.button2.Location = new System.Drawing.Point(158, 554);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(167, 52);
             this.button2.TabIndex = 8;
             this.button2.Text = "Clear";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
+            this.button3.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(920, 554);
+            this.button3.ForeColor = System.Drawing.SystemColors.Control;
+            this.button3.Location = new System.Drawing.Point(811, 554);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(143, 52);
             this.button3.TabIndex = 9;
             this.button3.Text = "Back";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // lbl4
@@ -166,7 +170,7 @@
             this.lbl4.AutoSize = true;
             this.lbl4.BackColor = System.Drawing.Color.White;
             this.lbl4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl4.Location = new System.Drawing.Point(372, 328);
+            this.lbl4.Location = new System.Drawing.Point(227, 328);
             this.lbl4.Name = "lbl4";
             this.lbl4.Size = new System.Drawing.Size(74, 24);
             this.lbl4.TabIndex = 10;
@@ -180,7 +184,7 @@
             this.cmbSex.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.cmbSex.Location = new System.Drawing.Point(543, 325);
+            this.cmbSex.Location = new System.Drawing.Point(398, 325);
             this.cmbSex.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbSex.Name = "cmbSex";
             this.cmbSex.Size = new System.Drawing.Size(225, 24);
@@ -192,7 +196,7 @@
             this.lbl5.AutoSize = true;
             this.lbl5.BackColor = System.Drawing.Color.White;
             this.lbl5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl5.Location = new System.Drawing.Point(372, 382);
+            this.lbl5.Location = new System.Drawing.Point(227, 382);
             this.lbl5.Name = "lbl5";
             this.lbl5.Size = new System.Drawing.Size(80, 24);
             this.lbl5.TabIndex = 12;
@@ -201,7 +205,7 @@
             // txtAddress
             // 
             this.txtAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtAddress.Location = new System.Drawing.Point(543, 382);
+            this.txtAddress.Location = new System.Drawing.Point(398, 382);
             this.txtAddress.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(371, 22);
@@ -214,7 +218,7 @@
             this.cmbUserType.Items.AddRange(new object[] {
             "Member",
             "Visitor"});
-            this.cmbUserType.Location = new System.Drawing.Point(543, 438);
+            this.cmbUserType.Location = new System.Drawing.Point(398, 438);
             this.cmbUserType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbUserType.Name = "cmbUserType";
             this.cmbUserType.Size = new System.Drawing.Size(225, 24);
@@ -226,7 +230,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(372, 440);
+            this.label2.Location = new System.Drawing.Point(227, 440);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(97, 24);
             this.label2.TabIndex = 15;
@@ -236,10 +240,10 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox1.Location = new System.Drawing.Point(160, 58);
+            this.pictureBox1.Location = new System.Drawing.Point(117, 58);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1018, 587);
+            this.pictureBox1.Size = new System.Drawing.Size(897, 587);
             this.pictureBox1.TabIndex = 25;
             this.pictureBox1.TabStop = false;
             // 
@@ -248,7 +252,7 @@
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(1371, 702);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cmbUserType);

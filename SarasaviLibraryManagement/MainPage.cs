@@ -28,5 +28,10 @@ namespace SarasaviLibraryManagement
             UserLogin ul = new UserLogin();
             ul.Show();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

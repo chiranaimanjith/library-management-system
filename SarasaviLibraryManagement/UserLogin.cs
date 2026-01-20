@@ -33,5 +33,10 @@ namespace SarasaviLibraryManagement
             UserDashboard ud = new UserDashboard();
             ud.Show();
         }
+
+        private void UserLogin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

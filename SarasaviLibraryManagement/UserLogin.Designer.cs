@@ -56,7 +56,7 @@
             // 
             // loginbtn
             // 
-            this.loginbtn.BackColor = System.Drawing.Color.Teal;
+            this.loginbtn.BackColor = System.Drawing.Color.DodgerBlue;
             this.loginbtn.CausesValidation = false;
             this.loginbtn.FlatAppearance.BorderSize = 0;
             this.loginbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -165,6 +165,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(1163, 656);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.loginbtn);
@@ -181,6 +182,7 @@
             this.Name = "UserLogin";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "UserLogin";
+            this.Load += new System.EventHandler(this.UserLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

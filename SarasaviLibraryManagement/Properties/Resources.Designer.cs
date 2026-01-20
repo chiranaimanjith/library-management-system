@@ -93,6 +93,26 @@ namespace SarasaviLibraryManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Icon {
+            get {
+                object obj = ResourceManager.GetObject("Icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icon1 {
+            get {
+                object obj = ResourceManager.GetObject("Icon1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap image_2026_01_18_133233694 {
             get {
                 object obj = ResourceManager.GetObject("image_2026-01-18_133233694", resourceCulture);
@@ -186,6 +206,16 @@ namespace SarasaviLibraryManagement.Properties {
         internal static System.Drawing.Bitmap user_plus1 {
             get {
                 object obj = ResourceManager.GetObject("user-plus1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap uu {
+            get {
+                object obj = ResourceManager.GetObject("uu", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

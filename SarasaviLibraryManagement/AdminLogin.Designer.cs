@@ -93,7 +93,7 @@
             // 
             // loginbtn
             // 
-            this.loginbtn.BackColor = System.Drawing.Color.Teal;
+            this.loginbtn.BackColor = System.Drawing.Color.DodgerBlue;
             this.loginbtn.CausesValidation = false;
             this.loginbtn.FlatAppearance.BorderSize = 0;
             this.loginbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

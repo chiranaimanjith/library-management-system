@@ -50,9 +50,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(528, 43);
+            this.label1.Location = new System.Drawing.Point(487, 43);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(180, 39);
@@ -64,7 +64,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(122, 118);
+            this.label2.Location = new System.Drawing.Point(72, 128);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(142, 26);
@@ -75,7 +75,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(122, 226);
+            this.label3.Location = new System.Drawing.Point(72, 258);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(152, 26);
@@ -84,27 +84,29 @@
             // 
             // btnconfirm
             // 
-            this.btnconfirm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnconfirm.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnconfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnconfirm.Location = new System.Drawing.Point(141, 445);
+            this.btnconfirm.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnconfirm.Location = new System.Drawing.Point(100, 445);
             this.btnconfirm.Margin = new System.Windows.Forms.Padding(2);
             this.btnconfirm.Name = "btnconfirm";
             this.btnconfirm.Size = new System.Drawing.Size(183, 47);
             this.btnconfirm.TabIndex = 5;
             this.btnconfirm.Text = "Confirm Loan";
-            this.btnconfirm.UseVisualStyleBackColor = true;
+            this.btnconfirm.UseVisualStyleBackColor = false;
             this.btnconfirm.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // btnclear
             // 
-            this.btnclear.BackColor = System.Drawing.Color.Transparent;
+            this.btnclear.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.btnclear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnclear.Location = new System.Drawing.Point(904, 444);
+            this.btnclear.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnclear.Location = new System.Drawing.Point(817, 443);
             this.btnclear.Margin = new System.Windows.Forms.Padding(2);
             this.btnclear.Name = "btnclear";
-            this.btnclear.Size = new System.Drawing.Size(183, 48);
+            this.btnclear.Size = new System.Drawing.Size(167, 48);
             this.btnclear.TabIndex = 6;
-            this.btnclear.Text = "Cancel";
+            this.btnclear.Text = "Clear";
             this.btnclear.UseVisualStyleBackColor = false;
             this.btnclear.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -117,7 +119,7 @@
             // 
             // txtun
             // 
-            this.txtun.Location = new System.Drawing.Point(118, 171);
+            this.txtun.Location = new System.Drawing.Point(77, 171);
             this.txtun.Margin = new System.Windows.Forms.Padding(2);
             this.txtun.Name = "txtun";
             this.txtun.Size = new System.Drawing.Size(267, 22);
@@ -131,11 +133,11 @@
             this.colCopyNo,
             this.colTitle,
             this.colStatus});
-            this.dgvBooksToLoan.Location = new System.Drawing.Point(641, 159);
+            this.dgvBooksToLoan.Location = new System.Drawing.Point(570, 168);
             this.dgvBooksToLoan.Margin = new System.Windows.Forms.Padding(4);
             this.dgvBooksToLoan.Name = "dgvBooksToLoan";
             this.dgvBooksToLoan.RowHeadersWidth = 51;
-            this.dgvBooksToLoan.Size = new System.Drawing.Size(459, 185);
+            this.dgvBooksToLoan.Size = new System.Drawing.Size(430, 199);
             this.dgvBooksToLoan.TabIndex = 8;
             this.dgvBooksToLoan.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBooksToLoan_CellContentClick);
             // 
@@ -164,7 +166,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(814, 118);
+            this.label4.Location = new System.Drawing.Point(706, 118);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(131, 26);
             this.label4.TabIndex = 9;
@@ -173,9 +175,9 @@
             // checkuser
             // 
             this.checkuser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkuser.Location = new System.Drawing.Point(412, 168);
+            this.checkuser.Location = new System.Drawing.Point(371, 168);
             this.checkuser.Name = "checkuser";
-            this.checkuser.Size = new System.Drawing.Size(85, 27);
+            this.checkuser.Size = new System.Drawing.Size(85, 35);
             this.checkuser.TabIndex = 10;
             this.checkuser.Text = "Check";
             this.checkuser.UseVisualStyleBackColor = true;
@@ -183,19 +185,21 @@
             // 
             // btncancel
             // 
+            this.btncancel.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.btncancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btncancel.Location = new System.Drawing.Point(553, 445);
+            this.btncancel.ForeColor = System.Drawing.SystemColors.Control;
+            this.btncancel.Location = new System.Drawing.Point(494, 445);
             this.btncancel.Name = "btncancel";
             this.btncancel.Size = new System.Drawing.Size(142, 47);
             this.btncancel.TabIndex = 11;
             this.btncancel.Text = "Back";
-            this.btncancel.UseVisualStyleBackColor = true;
+            this.btncancel.UseVisualStyleBackColor = false;
             this.btncancel.Click += new System.EventHandler(this.button4_Click);
             // 
             // dateTimeexpedcted
             // 
             this.dateTimeexpedcted.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimeexpedcted.Location = new System.Drawing.Point(118, 299);
+            this.dateTimeexpedcted.Location = new System.Drawing.Point(77, 299);
             this.dateTimeexpedcted.Name = "dateTimeexpedcted";
             this.dateTimeexpedcted.Size = new System.Drawing.Size(298, 26);
             this.dateTimeexpedcted.TabIndex = 7;
@@ -205,8 +209,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::SarasaviLibraryManagement.Properties.Resources.library;
-            this.ClientSize = new System.Drawing.Size(1271, 611);
+            this.BackColor = System.Drawing.Color.AliceBlue;
+            this.ClientSize = new System.Drawing.Size(1171, 611);
             this.Controls.Add(this.btncancel);
             this.Controls.Add(this.checkuser);
             this.Controls.Add(this.label4);

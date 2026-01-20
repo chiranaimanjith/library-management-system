@@ -172,10 +172,7 @@ namespace SarasaviLibraryManagement
             LoadFormToPanel(panel4, new Inquiry());
         }
 
-        private void button7_Click_1(object sender, EventArgs e)
-        {
-            LoadFormToPanel(panel4, new AdminPermission()); 
-        }
+        
 
         private void panel5_Paint(object sender, PaintEventArgs e)
         {

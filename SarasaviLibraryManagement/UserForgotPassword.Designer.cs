@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserForgotPassword));
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.loginbtn = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -55,7 +56,7 @@
             // 
             // loginbtn
             // 
-            this.loginbtn.BackColor = System.Drawing.Color.Teal;
+            this.loginbtn.BackColor = System.Drawing.Color.DodgerBlue;
             this.loginbtn.CausesValidation = false;
             this.loginbtn.FlatAppearance.BorderSize = 0;
             this.loginbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -162,6 +163,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(1156, 678);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.loginbtn);
@@ -173,6 +175,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.pictureBox3);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "UserForgotPassword";
             this.Text = "UserForgotPassword";
             this.Load += new System.EventHandler(this.UserForgotPassword_Load);

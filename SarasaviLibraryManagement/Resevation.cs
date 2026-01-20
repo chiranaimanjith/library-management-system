@@ -16,6 +16,19 @@ namespace SarasaviLibraryManagement
         private string connectionString = "server=localhost;user=root;password=2004;database=library_db;";
         private bool isUserVerified = false;
 
+        public Resevation()
+        {
+            InitializeComponent();
+        }
+
+        public static List<Resevation> ReservationList = new List<Resevation>();
+
+        private void Reservation_Load(object sender, EventArgs e)
+        {
+
+        }
+
+
         private void LoadBooks()
         {
             dgvReservation.Rows.Clear();
@@ -32,8 +45,8 @@ namespace SarasaviLibraryManagement
             dgvReservation.Columns.Add("BookNumber", "Book Number");
             dgvReservation.Columns.Add("Title", "Title");
             dgvReservation.Columns.Add("Author", "Author");
-            dgvReservation.Columns.Add("AvailableCopies", "Available Copies");
-            dgvReservation.Columns.Add("Status", "Status");
+            dgvReservation.Columns.Add("StockQuantity", "StockQuantity");
+           
 
             dgvReservation.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
@@ -42,18 +55,18 @@ namespace SarasaviLibraryManagement
                 using (MySqlConnection conn = new MySqlConnection(connectionString))
                 {
                     conn.Open();
-                    string query = "SELECT BookNumber, Title, Author, NumberOfCopies, AvailableCopies FROM Books";
+                    string query = "SELECT BookNumber, Title, Author, StockQuantity FROM Books";
                     using (MySqlCommand cmd = new MySqlCommand(query, conn))
                     using (MySqlDataReader reader = cmd.ExecuteReader())
                     {
                         while (reader.Read())
                         {
-                            string status = reader.GetInt32("AvailableCopies") > 0 ? "Available" : "Not Available";
+                            string status = reader.GetInt32("StockQuantity") > 0 ? "Available" : "Not Available";
                             dgvReservation.Rows.Add(false,
                                 reader.GetString("BookNumber"),
                                 reader.GetString("Title"),
                                 reader.GetString("Author"),
-                                reader.GetInt32("AvailableCopies"),
+                                reader.GetInt32("StockQuantity"),
                                 status);
                         }
                     }
@@ -65,12 +78,7 @@ namespace SarasaviLibraryManagement
             }
         }
 
-        public static List<Resevation> ResevationList = new List<Resevation>();
-        public Resevation()
-        {
-            InitializeComponent();
-        }
-
+        
         private void Resevation_Load(object sender, EventArgs e)
         {
 
@@ -91,12 +99,12 @@ namespace SarasaviLibraryManagement
 
             var selectedRows = dgvReservation.Rows
                 .Cast<DataGridViewRow>()
-                .Where(r => Convert.ToBoolean(r.Cells["Select"].Value) == true)
+                .Where(r => r.Cells["Select"].Value != null && (bool)r.Cells["Select"].Value)
                 .ToList();
 
             if (selectedRows.Count == 0)
             {
-                MessageBox.Show("Select at least one book to reserve.", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Select at least one book.", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -109,66 +117,74 @@ namespace SarasaviLibraryManagement
                     foreach (var row in selectedRows)
                     {
                         string bookNumber = row.Cells["BookNumber"].Value.ToString();
-                        string title = row.Cells["Title"].Value.ToString();
-                        int availableCopies = Convert.ToInt32(row.Cells["AvailableCopies"].Value);
+                        int stock = Convert.ToInt32(row.Cells["StockQuantity"].Value);
 
-                        if (availableCopies <= 0)
+                        if (stock <= 0)
                         {
-                            MessageBox.Show($"Book '{title}' is not available.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            MessageBox.Show($"Book {bookNumber} not available.");
                             continue;
                         }
 
-
-                        string checkQuery = @"SELECT COUNT(*) FROM Reservations 
-                                              WHERE UserNumber=@UserNumber AND BookNumber=@BookNumber 
-                                              AND Status='Reserved'";
-                        using (MySqlCommand cmdCheck = new MySqlCommand(checkQuery, conn))
+                        // 🔍 Check duplicate reservation
+                        string checkQuery = @"SELECT COUNT(*) FROM Reservations
+                                      WHERE UserNumber=@UserNumber
+                                      AND BookNumber=@BookNumber
+                                      AND Status='Reserved'";
+                        using (MySqlCommand chk = new MySqlCommand(checkQuery, conn))
                         {
-                            cmdCheck.Parameters.AddWithValue("@UserNumber", textBox1.Text.Trim());
-                            cmdCheck.Parameters.AddWithValue("@BookNumber", bookNumber);
-                            int already = Convert.ToInt32(cmdCheck.ExecuteScalar());
-                            if (already > 0)
+                            chk.Parameters.AddWithValue("@UserNumber", textBox1.Text.Trim());
+                            chk.Parameters.AddWithValue("@BookNumber", bookNumber);
+
+                            if (Convert.ToInt32(chk.ExecuteScalar()) > 0)
                             {
-                                MessageBox.Show($"You already reserved '{title}'.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show($"Already reserved book {bookNumber}");
                                 continue;
                             }
                         }
 
+                        // ➕ Insert reservation
+                        string insertQuery = @"INSERT INTO Reservations
+                    (UserNumber, BookNumber, ReservationDate, ExpectedPickupDate, Status)
+                    VALUES
+                    (@UserNumber, @BookNumber, @ResDate, @ExpDate, 'Reserved')";
 
-                        string insertQuery = @"INSERT INTO Reservations 
-                                               (UserNumber, BookNumber,ReservationDate, ExpectedPickupDate, Status)
-                                               VALUES (@UserNumber, @BookNumber,@ReservationDate, @ExpectedPickupDate, 'Reserved')";
-                        using (MySqlCommand cmdInsert = new MySqlCommand(insertQuery, conn))
+                        using (MySqlCommand insert = new MySqlCommand(insertQuery, conn))
                         {
-                            cmdInsert.Parameters.AddWithValue("@UserNumber", textBox1.Text.Trim());
-                            cmdInsert.Parameters.AddWithValue("@BookNumber", bookNumber);
-                            cmdInsert.Parameters.AddWithValue("@BookTitle", title);
-                            cmdInsert.Parameters.AddWithValue("@ReservationDate", dateTimePicker1.Value.Date);
-                            cmdInsert.Parameters.AddWithValue("@ExpectedPickupDate", dateTimePicker1.Value.Date);
-                            cmdInsert.ExecuteNonQuery();
+                            insert.Parameters.AddWithValue("@UserNumber", textBox1.Text.Trim());
+                            insert.Parameters.AddWithValue("@BookNumber", bookNumber);
+                            insert.Parameters.AddWithValue("@ResDate", DateTime.Today);
+                            insert.Parameters.AddWithValue("@ExpDate", dateTimePicker2.Value.Date);
+                            insert.ExecuteNonQuery();
                         }
 
-
-                        string updateQuery = "UPDATE Books SET AvailableCopies = AvailableCopies - 1 WHERE BookNumber=@BookNumber";
-                        using (MySqlCommand cmdUpdate = new MySqlCommand(updateQuery, conn))
+                        // ➖ Update stock
+                        string updateQuery = @"UPDATE Books
+                                       SET StockQuantity = StockQuantity - 1
+                                       WHERE BookNumber=@BookNumber";
+                        using (MySqlCommand up = new MySqlCommand(updateQuery, conn))
                         {
-                            cmdUpdate.Parameters.AddWithValue("@BookNumber", bookNumber);
-                            cmdUpdate.ExecuteNonQuery();
+                            up.Parameters.AddWithValue("@BookNumber", bookNumber);
+                            up.ExecuteNonQuery();
                         }
 
-
-                        row.Cells["AvailableCopies"].Value = availableCopies - 1;
-                        row.Cells["Status"].Value = availableCopies - 1 > 0 ? "Available" : "Not Available";
+                        // UI update
+                        row.Cells["StockQuantity"].Value = stock - 1;
                     }
                 }
 
-                MessageBox.Show("Selected books reserved successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Reservation completed successfully!", "Success",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error reserving books: " + ex.Message);
+                MessageBox.Show("Error reserving book: " + ex.Message);
             }
         }
+
+
+
+
+
         private void txtUserNumber_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
@@ -230,7 +246,19 @@ namespace SarasaviLibraryManagement
 
         private void button4_Click(object sender, EventArgs e)
         {
-            ClearForm();
+
+            textBox1.Clear();
+            dgvReservation.Rows.Clear();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

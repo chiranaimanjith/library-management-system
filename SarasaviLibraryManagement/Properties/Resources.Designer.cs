@@ -83,6 +83,16 @@ namespace SarasaviLibraryManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap back {
+            get {
+                object obj = ResourceManager.GetObject("back", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap image_2026_01_18_133233694 {
             get {
                 object obj = ResourceManager.GetObject("image_2026-01-18_133233694", resourceCulture);
@@ -93,9 +103,29 @@ namespace SarasaviLibraryManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap istockphoto_1367269418_170667a {
+            get {
+                object obj = ResourceManager.GetObject("istockphoto-1367269418-170667a", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap library {
             get {
                 object obj = ResourceManager.GetObject("library", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap library_with_rows_books_inviting_reading_spaces_44562_2430 {
+            get {
+                object obj = ResourceManager.GetObject("library-with-rows-books-inviting-reading-spaces_44562-2430", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

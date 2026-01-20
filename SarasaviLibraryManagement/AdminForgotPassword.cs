@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SarasaviLibraryManagement
 {
-    public partial class ForgotPassword : Form
+    public partial class AdminForgotPassword : Form
     {
-        public ForgotPassword()
+        public AdminForgotPassword()
         {
             InitializeComponent();
         }

@@ -105,7 +105,7 @@ namespace SarasaviLibraryManagement
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            ForgotPassword forgotPassword = new ForgotPassword();
+            AdminForgotPassword forgotPassword = new AdminForgotPassword();
             forgotPassword.Show();
         }
     }

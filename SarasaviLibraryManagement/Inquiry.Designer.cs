@@ -31,15 +31,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inquiry));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.searchText = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.radioButtonUserId = new System.Windows.Forms.RadioButton();
             this.radioButtonBookId = new System.Windows.Forms.RadioButton();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvSearchResults = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSearchResults)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -65,15 +65,15 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Book Number";
             // 
-            // textBox1
+            // searchText
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(469, 175);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(311, 28);
-            this.textBox1.TabIndex = 2;
+            this.searchText.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.searchText.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchText.Location = new System.Drawing.Point(469, 175);
+            this.searchText.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.searchText.Name = "searchText";
+            this.searchText.Size = new System.Drawing.Size(311, 28);
+            this.searchText.TabIndex = 2;
             // 
             // button1
             // 
@@ -136,15 +136,15 @@
             this.radioButtonBookId.Text = "Book ID";
             this.radioButtonBookId.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dgvSearchResults
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(408, 343);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
-            this.dataGridView1.TabIndex = 23;
+            this.dgvSearchResults.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSearchResults.Location = new System.Drawing.Point(480, 319);
+            this.dgvSearchResults.Name = "dgvSearchResults";
+            this.dgvSearchResults.RowHeadersWidth = 51;
+            this.dgvSearchResults.RowTemplate.Height = 24;
+            this.dgvSearchResults.Size = new System.Drawing.Size(240, 150);
+            this.dgvSearchResults.TabIndex = 23;
             // 
             // Inquiry
             // 
@@ -152,12 +152,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1371, 693);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvSearchResults);
             this.Controls.Add(this.radioButtonBookId);
             this.Controls.Add(this.radioButtonUserId);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.searchText);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
@@ -167,9 +167,9 @@
             this.MaximizeBox = false;
             this.Name = "Inquiry";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
-            this.Text = "Inquiry";
+            this.Text = "t";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSearchResults)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -179,12 +179,12 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox searchText;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.RadioButton radioButtonUserId;
         private System.Windows.Forms.RadioButton radioButtonBookId;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvSearchResults;
     }
 }

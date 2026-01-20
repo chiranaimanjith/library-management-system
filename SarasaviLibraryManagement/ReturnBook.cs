@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
@@ -31,9 +25,13 @@ namespace SarasaviLibraryManagement
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(textBox1.Text) || string.IsNullOrWhiteSpace(textBox2.Text))
+            if (string.IsNullOrWhiteSpace(textBox1.Text) ||
+                string.IsNullOrWhiteSpace(textBox2.Text))
             {
-                MessageBox.Show("Please enter all fields", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please enter User Number and Book Number",
+                    "Validation Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
                 return;
             }
 
@@ -46,35 +44,54 @@ namespace SarasaviLibraryManagement
                 {
                     conn.Open();
 
+                    int loanId = 0;
+                    string bookTitle = "";
 
-                    string checkQuery = @"
-                SELECT LoanID, BookTitle 
-                FROM Loans 
-                WHERE UserNumber = @UserNumber 
-                AND BookTitle = (SELECT Title FROM Books WHERE BookNumber = @BookNumber)";
-
-                    int loanId;
-                    string bookTitle;
-
-                    using (MySqlCommand cmd = new MySqlCommand(checkQuery, conn))
+                    // 1️⃣ Get Book Title using BookNumber
+                    string titleQuery = "SELECT Title FROM Books WHERE BookNumber = @BookNumber";
+                    using (MySqlCommand cmdTitle = new MySqlCommand(titleQuery, conn))
                     {
-                        cmd.Parameters.AddWithValue("@UserNumber", userNumber);
-                        cmd.Parameters.AddWithValue("@BookNumber", bookNumber);
+                        cmdTitle.Parameters.AddWithValue("@BookNumber", bookNumber);
+                        object result = cmdTitle.ExecuteScalar();
 
-                        using (MySqlDataReader reader = cmd.ExecuteReader())
+                        if (result == null)
                         {
-                            if (!reader.Read())
-                            {
-                                MessageBox.Show("This book is not currently loaned to this user", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                return;
-                            }
-
-                            loanId = reader.GetInt32("LoanID");
-                            bookTitle = reader.GetString("BookTitle");
+                            MessageBox.Show("Book not found!",
+                                "Error",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning);
+                            return;
                         }
+
+                        bookTitle = result.ToString();
                     }
 
+                    // 2️⃣ Check loan exists
+                    string checkLoanQuery = @"
+                        SELECT LoanID 
+                        FROM Loans 
+                        WHERE UserNumber = @UserNumber 
+                        AND BookTitle = @BookTitle";
 
+                    using (MySqlCommand cmdCheck = new MySqlCommand(checkLoanQuery, conn))
+                    {
+                        cmdCheck.Parameters.AddWithValue("@UserNumber", userNumber);
+                        cmdCheck.Parameters.AddWithValue("@BookTitle", bookTitle);
+
+                        object loanResult = cmdCheck.ExecuteScalar();
+                        if (loanResult == null)
+                        {
+                            MessageBox.Show("This book is not loaned to this user",
+                                "Error",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning);
+                            return;
+                        }
+
+                        loanId = Convert.ToInt32(loanResult);
+                    }
+
+                    // 3️⃣ Delete from Loans
                     string deleteQuery = "DELETE FROM Loans WHERE LoanID = @LoanID";
                     using (MySqlCommand cmdDelete = new MySqlCommand(deleteQuery, conn))
                     {
@@ -82,15 +99,20 @@ namespace SarasaviLibraryManagement
                         cmdDelete.ExecuteNonQuery();
                     }
 
-
-                    string updateQuery = "UPDATE Books SET AvailableCopies = AvailableCopies + 1 WHERE BookNumber = @BookNumber";
+                    // 4️⃣ Increase stock in Books
+                    string updateQuery =
+                        "UPDATE Books SET StockQuantity = StockQuantity + 1 WHERE BookNumber = @BookNumber";
                     using (MySqlCommand cmdUpdate = new MySqlCommand(updateQuery, conn))
                     {
                         cmdUpdate.Parameters.AddWithValue("@BookNumber", bookNumber);
                         cmdUpdate.ExecuteNonQuery();
                     }
 
-                    MessageBox.Show($"Book returned successfully!\nTitle: {bookTitle}", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(
+                        $"Book returned successfully!\nTitle: {bookTitle}",
+                        "Success",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
 
                     textBox1.Clear();
                     textBox2.Clear();
@@ -98,8 +120,19 @@ namespace SarasaviLibraryManagement
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error returning book: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error returning book: " + ex.Message,
+                    "Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
             }
+        }
+    
+
+
+private void button2_Click(object sender, EventArgs e)
+        {
+            textBox1.Clear();  
+            textBox2.Clear();
         }
     }
 }

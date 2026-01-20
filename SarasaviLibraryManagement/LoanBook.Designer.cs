@@ -34,9 +34,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnconfirm = new System.Windows.Forms.Button();
             this.btnclear = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
-            this.dateTimeexpedcted = new System.Windows.Forms.DateTimePicker();
             this.txtun = new System.Windows.Forms.TextBox();
             this.dgvBooksToLoan = new System.Windows.Forms.DataGridView();
             this.colCopyNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,6 +43,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.checkuser = new System.Windows.Forms.Button();
             this.btncancel = new System.Windows.Forms.Button();
+            this.dateTimeexpedcted = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBooksToLoan)).BeginInit();
             this.SuspendLayout();
             // 
@@ -103,19 +102,11 @@
             this.btnclear.Location = new System.Drawing.Point(904, 444);
             this.btnclear.Margin = new System.Windows.Forms.Padding(2);
             this.btnclear.Name = "btnclear";
-            this.btnclear.Size = new System.Drawing.Size(183, 47);
+            this.btnclear.Size = new System.Drawing.Size(183, 48);
             this.btnclear.TabIndex = 6;
             this.btnclear.Text = "Cancel";
             this.btnclear.UseVisualStyleBackColor = false;
             this.btnclear.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(364, 108);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker1.TabIndex = 7;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // mySqlCommand1
             // 
@@ -123,15 +114,6 @@
             this.mySqlCommand1.Connection = null;
             this.mySqlCommand1.EnableCaching = false;
             this.mySqlCommand1.Transaction = null;
-            // 
-            // dateTimeexpedcted
-            // 
-            this.dateTimeexpedcted.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimeexpedcted.Location = new System.Drawing.Point(118, 299);
-            this.dateTimeexpedcted.Name = "dateTimeexpedcted";
-            this.dateTimeexpedcted.Size = new System.Drawing.Size(298, 26);
-            this.dateTimeexpedcted.TabIndex = 7;
-            this.dateTimeexpedcted.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
             // 
             // txtun
             // 
@@ -204,18 +186,27 @@
             this.btncancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btncancel.Location = new System.Drawing.Point(553, 445);
             this.btncancel.Name = "btncancel";
-            this.btncancel.Size = new System.Drawing.Size(142, 45);
+            this.btncancel.Size = new System.Drawing.Size(142, 47);
             this.btncancel.TabIndex = 11;
             this.btncancel.Text = "Back";
             this.btncancel.UseVisualStyleBackColor = true;
             this.btncancel.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // dateTimeexpedcted
+            // 
+            this.dateTimeexpedcted.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimeexpedcted.Location = new System.Drawing.Point(118, 299);
+            this.dateTimeexpedcted.Name = "dateTimeexpedcted";
+            this.dateTimeexpedcted.Size = new System.Drawing.Size(298, 26);
+            this.dateTimeexpedcted.TabIndex = 7;
+            this.dateTimeexpedcted.ValueChanged += new System.EventHandler(this.dateTimeexpedcted_ValueChanged);
             // 
             // LoanBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::SarasaviLibraryManagement.Properties.Resources.library;
-            this.ClientSize = new System.Drawing.Size(1194, 582);
+            this.ClientSize = new System.Drawing.Size(1271, 611);
             this.Controls.Add(this.btncancel);
             this.Controls.Add(this.checkuser);
             this.Controls.Add(this.label4);
@@ -249,7 +240,6 @@
         private System.Windows.Forms.Button btnclear;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private MySql.Data.MySqlClient.MySqlCommand mySqlCommand1;
-        private System.Windows.Forms.DateTimePicker dateTimeexpedcted;
         private System.Windows.Forms.TextBox txtun;
         private System.Windows.Forms.DataGridView dgvBooksToLoan;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCopyNo;
@@ -258,5 +248,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button checkuser;
         private System.Windows.Forms.Button btncancel;
+        private System.Windows.Forms.DateTimePicker dateTimeexpedcted;
     }
 }

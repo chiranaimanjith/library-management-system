@@ -1,6 +1,6 @@
 ﻿namespace SarasaviLibraryManagement
 {
-    partial class ForgotPassword
+    partial class AdminForgotPassword
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ForgotPassword));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminForgotPassword));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -120,7 +120,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(288, 26);
             this.textBox1.TabIndex = 6;
-            this.textBox1.Text = "Enter User Number";
             // 
             // label3
             // 
@@ -143,7 +142,6 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(288, 26);
             this.textBox2.TabIndex = 6;
-            this.textBox2.Text = "Enter National Identity Card Number";
             // 
             // label4
             // 
@@ -166,7 +164,6 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(288, 26);
             this.textBox3.TabIndex = 6;
-            this.textBox3.Text = "Enter New Password";
             // 
             // loginbtn
             // 
@@ -195,7 +192,7 @@
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Back to Login";
             // 
-            // ForgotPassword
+            // AdminForgotPassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -213,7 +210,7 @@
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Name = "ForgotPassword";
+            this.Name = "AdminForgotPassword";
             this.Text = "ForgotPassword";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

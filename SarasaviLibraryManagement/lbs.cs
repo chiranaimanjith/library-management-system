@@ -176,5 +176,20 @@ namespace SarasaviLibraryManagement
         {
             LoadFormToPanel(panel4, new AdminPermission()); 
         }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label19_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -15,12 +15,12 @@ namespace SarasaviLibraryManagement
     {
         private string connectionString = "server=localhost;user=root;password=2004;database=library_db;";
         private TextBox txtUserNumber;
-        private MySqlConnection con; 
+        private MySqlConnection con;
 
         public Login()
         {
             InitializeComponent();
-            con = new MySqlConnection(connectionString); 
+            con = new MySqlConnection(connectionString);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -105,8 +105,9 @@ namespace SarasaviLibraryManagement
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            AdminForgotPassword forgotPassword = new AdminForgotPassword();
+             New_Registration forgotPassword = new New_Registration();
             forgotPassword.Show();
         }
     }
 }
+    

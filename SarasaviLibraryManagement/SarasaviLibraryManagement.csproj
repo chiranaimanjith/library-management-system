@@ -105,12 +105,6 @@
     </Compile>
     <Compile Include="cmbSex\Selected.cs" />
     <Compile Include="DBConnection.cs" />
-    <Compile Include="AdminForgotPassword.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AdminForgotPassword.Designer.cs">
-      <DependentUpon>AdminForgotPassword.cs</DependentUpon>
-    </Compile>
     <Compile Include="Inquiry.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +135,12 @@
     </Compile>
     <Compile Include="MainPage.Designer.cs">
       <DependentUpon>MainPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="New Registration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="New Registration.Designer.cs">
+      <DependentUpon>New Registration.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -185,9 +185,6 @@
     <EmbeddedResource Include="BookRegistration.resx">
       <DependentUpon>BookRegistration.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminForgotPassword.resx">
-      <DependentUpon>AdminForgotPassword.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Inquiry.resx">
       <DependentUpon>Inquiry.cs</DependentUpon>
     </EmbeddedResource>
@@ -202,6 +199,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainPage.resx">
       <DependentUpon>MainPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="New Registration.resx">
+      <DependentUpon>New Registration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

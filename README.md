@@ -13,17 +13,6 @@ A Windows desktop application to manage day to day library operations such as bo
 
 ---
 
-## Features
-
-- Book Management (Add / Update / Delete / Search)
-- Member Management (Register / Update / Search)
-- Issue & Return Books
-- Due Date Tracking 
-- Reports
-- User Login / Roles 
-
----
-
 ## Screenshots
 
 <img width="772" height="560" alt="mainpage" src="https://github.com/user-attachments/assets/31b0b4a7-cede-45f1-8294-49720ffd3d1b" />
@@ -48,8 +37,8 @@ A Windows desktop application to manage day to day library operations such as bo
 
 ## Requirements
 
-- Windows 10/11
-- Visual Studio 2019/2022
+- Windows 11
+- Visual Studio 2022
 - .NET Framework Developer Pack 
 - LocalDB 
 

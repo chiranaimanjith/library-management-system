@@ -50,8 +50,10 @@ A Windows desktop application to manage day to day library operations such as bo
 
 - Windows 10/11
 - Visual Studio 2019/2022
-- .NET Framework Developer Pack (example: **4.8**)
-- (Optional) SQL Server / LocalDB (if your app uses a database)
+- .NET Framework Developer Pack 
+- LocalDB 
+
+- Database Download - https://drive.google.com/file/d/12Kc17L_IYFGZOLEOc9jOLwspiB5W6ttu/view?usp=drive_link
 
 ---
 

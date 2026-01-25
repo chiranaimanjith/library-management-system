@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserDashboard));
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dgvUserInquiry = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUserInquiry)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -45,15 +45,15 @@
             this.label1.Text = "Available Books in Library";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // dataGridView1
+            // dgvUserInquiry
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(245, 171);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(805, 403);
-            this.dataGridView1.TabIndex = 1;
+            this.dgvUserInquiry.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvUserInquiry.Location = new System.Drawing.Point(245, 171);
+            this.dgvUserInquiry.Name = "dgvUserInquiry";
+            this.dgvUserInquiry.RowHeadersWidth = 51;
+            this.dgvUserInquiry.RowTemplate.Height = 24;
+            this.dgvUserInquiry.Size = new System.Drawing.Size(805, 403);
+            this.dgvUserInquiry.TabIndex = 1;
             // 
             // UserDashboard
             // 
@@ -61,14 +61,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(1247, 717);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvUserInquiry);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "UserDashboard";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "UserDashboard";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUserInquiry)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -77,6 +77,6 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvUserInquiry;
     }
 }
